@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=NumberTextField
+comment1.params=start\ end\ text
+comment1.target=void\ replaceText(int,\ int,\ java.lang.String)
+comment2.params=text
+comment2.target=void\ replaceSelection(java.lang.String)
+comment3.params=
+comment3.target=double\ getDoubleValue()
+comment4.params=
+comment4.target=int\ getIntValue()
+comment5.params=v
+comment5.target=void\ setValue(double)
+comment6.params=v
+comment6.target=void\ setValue(int)
+numComments=7

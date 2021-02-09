@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=GeometrischeBildoperationen
+comment0.text=\r\n\ Algorithmen\ zur\ \u00C4nderung\ der\ Pixelpositionen\ eines\ Pictures\r\n\ z.B.\ drehen,\ spiegeln\ usw.\r\n\r\n\ @author\ Thomas\ Schaller\r\n\ @version\ 1.1\ (28.11.2019)\r\n
+comment1.params=originalbild
+comment1.target=imp.Picture\ spiegelHorizontal(imp.Picture)
+comment1.text=\ spiegeleHorizontal\ spiegelt\ das\ Bild,\ so\ dass\ rechts\ und\ links\ getauscht\ werden\r\n\ @param\ originalbild\ Ein\ Bild\ (Picture),\ das\ gespiegelt\ werden\ soll\r\n\ @return\ Eine\ gespiegelte\ Kopie\ des\ Bildes\r\n
+numComments=2

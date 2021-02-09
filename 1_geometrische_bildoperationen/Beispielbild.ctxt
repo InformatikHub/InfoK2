@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Beispielbild
+comment0.text=\r\n\ Klasse\ f\u00FCr\ Beispielbilder\r\n\r\n\ @author\ \ Thomas\ Schaller\r\n\ @version\ v1.0\ (28.11.2019)\r\n
+comment1.params=
+comment1.target=Beispielbild()
+comment1.text=\r\n\ Konstruktor\:\ \u00F6ffnet\ das\ Bild\ katze.jpg\r\n
+comment2.params=dateiname
+comment2.target=void\ load(java.lang.String)
+comment3.params=dateiname
+comment3.target=void\ save(java.lang.String)
+numComments=4

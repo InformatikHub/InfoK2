@@ -1,0 +1,40 @@
+Class documentation
+<---- javadoc command: ---->
+E:\Programme\Informatik\BlueJ4.2\BlueJ\jdk\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+11
+-classpath
+E:\Programme\Informatik\BlueJ4.2\bluej\lib\bluejcore.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\junit-4.11.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\hamcrest-core-1.3.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\lang-stride.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\javafx\lib\javafx.base.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\javafx\lib\javafx.controls.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\javafx\lib\javafx.fxml.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\javafx\lib\javafx.graphics.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\javafx\lib\javafx.media.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\javafx\lib\javafx.properties.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\javafx\lib\javafx.swing.jar;E:\Programme\Informatik\BlueJ4.2\bluej\lib\javafx\lib\javafx.web.jar;F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\+libs\jdom-1.1.3.jar;F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk
+-d
+F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\doc
+-encoding
+windows-1252
+-charset
+windows-1252
+F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\imp\PictureViewer.java
+<---- end of javadoc command ---->
+Loading source file F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\imp\PictureViewer.java...
+Constructing Javadoc information...
+Standard Doclet version 11.0.2
+Building tree for all the packages and classes...
+Generating F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\doc\imp\PictureViewer.html...
+F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\imp\PictureViewer.java:123: warning - @param argument "b" is not a parameter name.
+F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\imp\PictureViewer.java:163: warning - @param argument "factor" is not a parameter name.
+Generating F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\doc\imp\package-summary.html...
+Generating F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\doc\constant-values.html...
+Generating F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\doc\serialized-form.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\doc\allclasses.html...
+Generating F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\doc\allclasses.html...
+Generating F:\Informatik\Fortbildung ZPG IMP9\Fortbildungsfassung_überarbeitet\I02_alg\03_vorlagen_tauschordner\blueJVersion_Dirk\doc\index.html...
+2 warnings

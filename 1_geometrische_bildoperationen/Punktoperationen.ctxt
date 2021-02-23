@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Punktoperationen
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Punktoperationen.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=original
+comment1.target=imp.Picture\ graustufenDurchschnitt(imp.Picture)
+comment2.params=original
+comment2.target=imp.Picture\ graustufenNatuerlich(imp.Picture)
+comment3.params=original
+comment3.target=imp.Picture\ graustufenMin(imp.Picture)
+comment4.params=original
+comment4.target=imp.Picture\ graustufenMax(imp.Picture)
+comment5.params=pixel
+comment5.target=int\ getMaxColor(java.awt.Color)
+comment6.params=pixel
+comment6.target=int\ getMinColor(java.awt.Color)
+numComments=7

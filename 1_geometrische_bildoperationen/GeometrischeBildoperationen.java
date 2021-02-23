@@ -88,4 +88,6 @@ public class GeometrischeBildoperationen
     public Picture drehe180(Picture original){
         return spiegelVertikal(original);
     }
+    
+    
 }

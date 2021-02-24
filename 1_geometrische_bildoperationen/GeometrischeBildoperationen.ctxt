@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=GeometrischeBildoperationen
-comment0.text=\r\n\ Algorithmen\ zur\ \u00C4nderung\ der\ Pixelpositionen\ eines\ Pictures\r\n\ z.B.\ drehen,\ spiegeln\ usw.\r\n\r\n\ @author\ Thomas\ Schaller\r\n\ @author\ Lukas\ Hever\r\n\ @version\ 1.1\ (23.02.2021)\r\n
+comment0.text=\r\n\ Algorithmen\ zur\ \u00C4nderung\ der\ Pixelpositionen\ eines\ Pictures\r\n\ z.B.\ drehen,\ spiegeln\ usw.\r\n\r\n\ @author\ Thomas\ Schaller\r\n\ @author\ Lukas\ Hever\r\n\ @version\ 1.1\ (24.02.2021)\r\n
 comment1.params=originalbild
 comment1.target=imp.Picture\ spiegelHorizontal(imp.Picture)
 comment1.text=\ spiegeleHorizontal\ spiegelt\ das\ Bild,\ so\ dass\ rechts\ und\ links\ getauscht\ werden\r\n\ @param\ originalbild\ Ein\ Bild\ (Picture),\ das\ gespiegelt\ werden\ soll\r\n\ @return\ Eine\ gespiegelte\ Kopie\ des\ Bildes\r\n
@@ -10,4 +10,6 @@ comment3.params=originalbild
 comment3.target=imp.Picture\ dreheLinks(imp.Picture)
 comment4.params=originalbild
 comment4.target=imp.Picture\ dreheRechts(imp.Picture)
-numComments=5
+comment5.params=originalbild
+comment5.target=imp.Picture\ drehe180(imp.Picture)
+numComments=6

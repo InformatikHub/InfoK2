@@ -8,7 +8,7 @@ import java.util.Random;
  *
  * @author Thomas Schaller
  * @author Lukas Hever
- * @version 1.1 (23.02.2021)
+ * @version 1.1 (24.02.2021)
  */
 public class GeometrischeBildoperationen 
 {
@@ -80,7 +80,25 @@ public class GeometrischeBildoperationen
 
         for(int x=0; x < hoehe; x++) {
             for(int y=0;y < breite; y++) {
-                pixelNeu[x][y] = pixel[(breite-1)-y][x];
+                pixelNeu[x][y] = pixel[y][(hoehe-1)-x];
+            }
+        }
+
+        Picture neuesBild = new Picture();
+        neuesBild.setPixelArray(pixelNeu); 
+        return neuesBild;
+    }
+    
+    public  Picture drehe180(Picture originalbild) {
+        int breite = originalbild.getWidth();
+        int hoehe  = originalbild.getHeight();
+
+        Color[][] pixel = originalbild.getPixelArray();
+        Color[][] pixelNeu = new Color[breite][hoehe];
+
+        for(int x=0; x < breite; x++) {
+            for(int y=0;y < hoehe; y++) {
+                pixelNeu[x][y] = pixel[x][(hoehe-1)-y];
             }
         }
 

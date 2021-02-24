@@ -86,8 +86,58 @@ public class GeometrischeBildoperationen
     }
     
     public Picture drehe180(Picture original){
-        return spiegelVertikal(original);
+        int breite = original.getWidth();
+        int hoehe  = original.getHeight();
+
+        Color[][] pixel = original.getPixelArray();
+        Color[][] pixelNeu = new Color[breite][hoehe];
+
+        for(int x=0; x < breite; x++) {
+            for(int y=0;y < hoehe; y++) {
+                pixelNeu[x][y] = pixel[breite-1-x][(hoehe-1)-y];
+            }
+        }
+        Picture neuesBild = new Picture();
+        neuesBild.setPixelArray(pixelNeu); 
+        return neuesBild;
     }
+    public  Picture spiegelHorizontalMitte(Picture originalbild) {
+        return spiegelHorizontalWo(originalbild, originalbild.getWidth()/2);
+    }   
     
-    
+    public  Picture spiegelHorizontalWo(Picture originalbild, int wo) {
+        int breite = originalbild.getWidth();
+        int hoehe  = originalbild.getHeight();
+        int help = 0;
+
+        Color[][] pixel = originalbild.getPixelArray();
+        Color[][] pixelNeu = new Color[breite][hoehe];
+        
+        if(wo < breite/2){
+            for(int x = 0; x < wo; x++) {//gespiegeltes Bild
+                for(int y = 0; y < hoehe; y++) {
+                    pixelNeu[x][y] = pixel[wo*2 + help - x -1][y];
+                }
+            }
+            for(int x = wo; x < breite; x++) { //ungespiegeltes Bildübernommen
+                for(int y=0;y < hoehe; y++) {
+                    pixelNeu[x][y] = pixel[x][y];
+                }
+            }
+        }else{
+            for(int x = 0; x < wo; x++) {
+                for(int y = 0; y < hoehe; y++) {
+                    pixelNeu[x][y] = pixel[x][y];
+                }
+            }
+            for(int x = wo; x < breite; x++) {
+                for(int y=0;y < hoehe; y++) {
+                    pixelNeu[x][y] = pixel[wo-(x-wo)][y];
+                }
+            }
+        }
+        Picture neuesBild = new Picture();
+        neuesBild.setPixelArray(pixelNeu); 
+        return neuesBild;
+    }   
 }

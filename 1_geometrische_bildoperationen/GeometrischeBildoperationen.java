@@ -81,7 +81,7 @@ public class GeometrischeBildoperationen
             for(int y=0;y < hoehe; y++) {
                 // pixelNeu[y][x] = pixel[(breite-1)-x][(hoehe-1)-y];
                 pixelNeu[y][x] = pixel[x][(hoehe-1)-y]; // so ist es richtig, du hattest auch 
-                //noch horizontal gespiegelt (von oben nach unten) was nicht nötig war.
+                //noch vertikal gespiegelt (von oben nach unten) was nicht nötig war.
             }
         }
 

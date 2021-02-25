@@ -49,16 +49,12 @@ public class Punktoperation
                 int blauanteil=pixel[x][y].getBlue();
                 int grünanteil=pixel[x][y].getGreen();
                 
-                if(rotanteil<blauanteil){
-                    if(rotanteil<grünanteil){
-                        grauMin=rotanteil;
-                    }
-                }else if(blauanteil<rotanteil){
-                    if(blauanteil<grünanteil){
-                        grauMin=blauanteil;
-                    }
+                if(rotanteil<blauanteil && rotanteil<grünanteil){
+                     grauMin=rotanteil;
+                }else if(blauanteil<rotanteil && blauanteil<grünanteil){
+                     grauMin=blauanteil;
                 } else{
-                    grauMin=grünanteil;
+                     grauMin=grünanteil;
                 }
                 
                 pixelNeu[x][y]= new Color(grauMin,grauMin,grauMin);
@@ -86,16 +82,12 @@ public class Punktoperation
                 int blauanteil=pixel[x][y].getBlue();
                 int grünanteil=pixel[x][y].getGreen();
                 
-                if(rotanteil>blauanteil){
-                    if(rotanteil>grünanteil){
-                        grauMax=rotanteil;
-                    }
-                }else if(blauanteil>rotanteil){
-                    if(blauanteil>grünanteil){
-                        grauMax=blauanteil;
-                    }
+                if(rotanteil>blauanteil && rotanteil>grünanteil){
+                     grauMax=rotanteil;
+                }else if(blauanteil>rotanteil && blauanteil>grünanteil){
+                     grauMax=blauanteil;
                 } else{
-                    grauMax=grünanteil;
+                     grauMax=grünanteil;
                 }
                 
                 

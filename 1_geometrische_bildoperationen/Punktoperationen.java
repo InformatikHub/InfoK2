@@ -17,12 +17,12 @@ public class Punktoperationen {
         Color[][] pixelNeu = new Color[breite][hoehe];
         Color tmp;
         int ehre = 0;
-        Picture newImg = original;
+        Picture newImg = original; //?
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
                 ehre = (pixel[x][y].getRed() + pixel[x][y].getGreen() + pixel[x][y].getBlue()) /3;
-                tmp = new Color(ehre,ehre,ehre);
+                tmp = new Color(ehre,ehre,ehre); //super !
                 pixelNeu[x][y] = tmp;
             }
         }
@@ -39,12 +39,12 @@ public class Punktoperationen {
         Color[][] pixelNeu = new Color[breite][hoehe];
         Color tmp;
         int ehre = 0;
-        Picture newImg = original;
+        Picture newImg = original; //warum?
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
                 ehre = (int)(pixel[x][y].getRed()*0.299 + pixel[x][y].getGreen()*0.587 + pixel[x][y].getBlue()*0.114) ;
-                tmp = new Color(ehre,ehre,ehre);
+                tmp = new Color(ehre,ehre,ehre); //super!
                 pixelNeu[x][y] = tmp;
             }
         }
@@ -64,7 +64,7 @@ public class Punktoperationen {
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                tmp = getMinColor(pixel[x][y]);
+                tmp = getMinColor(pixel[x][y]);//gut, eigene Methode ausgelagert !
                 px = new Color(tmp,tmp,tmp);
                 pixelNeu[x][y] = px;
             }
@@ -100,7 +100,7 @@ public class Punktoperationen {
         red = pixel.getRed();
         green = pixel.getGreen();
         blue = pixel.getBlue();
-        if((red > blue && red > green) || (red > blue)){
+        if((red > blue && red > green) || (red > blue)){//falls red = 15 blue = 10 und green = 20 hast du hier einen Fehler, oder?
             return red;
         }else if ((blue > red && blue > green) || (blue > red)){
             return blue;
@@ -114,7 +114,7 @@ public class Punktoperationen {
         red = pixel.getRed();
         green = pixel.getGreen();
         blue = pixel.getBlue();
-        if((red < blue && red < green) || (red < blue)){
+        if((red < blue && red < green) || (red < blue)){ //falls red = 10 blue = 15 und green = 5 hast du hier einen Fehler, oder?
             return red;
         }else if ((blue < red && blue < green) || (blue < red)){
             return blue;

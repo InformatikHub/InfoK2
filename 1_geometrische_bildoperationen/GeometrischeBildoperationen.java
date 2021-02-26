@@ -43,7 +43,7 @@ public class GeometrischeBildoperationen
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                pixelNeu[x][y] = pixel[x][(hoehe-1)-y];
+                pixelNeu[x][y] = pixel[x][(hoehe-1)-y]; //gut
             }
         }
         Picture neuesBild = new Picture();
@@ -60,7 +60,7 @@ public class GeometrischeBildoperationen
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                pixelNeu[y][x] = pixel[x][y];
+                pixelNeu[y][x] = pixel[x][y]; //stimmt so nicht, zusätzlich wird das Bild noch bzgl. vorne und hinten gedreht.
             }
         }
         Picture neuesBild = new Picture();
@@ -73,11 +73,11 @@ public class GeometrischeBildoperationen
         int hoehe  = original.getHeight();
 
         Color[][] pixel = original.getPixelArray();
-        Color[][] pixelNeu = new Color[hoehe][breite];
+        Color[][] pixelNeu = new Color[hoehe][breite];//gut
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                pixelNeu[y][x] = pixel[breite-1-x][hoehe-1-y];
+                pixelNeu[y][x] = pixel[breite-1-x][hoehe-1-y]; //stimmt so auch nicht, du spiegelst einmal von oben nach unten zuviel
             }
         }
         Picture neuesBild = new Picture();
@@ -94,7 +94,7 @@ public class GeometrischeBildoperationen
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                pixelNeu[x][y] = pixel[breite-1-x][(hoehe-1)-y];
+                pixelNeu[x][y] = pixel[breite-1-x][(hoehe-1)-y]; //gut
             }
         }
         Picture neuesBild = new Picture();
@@ -105,7 +105,7 @@ public class GeometrischeBildoperationen
         return spiegelHorizontalWo(originalbild, originalbild.getWidth()/2);
     }   
     
-    public  Picture spiegelHorizontalWo(Picture originalbild, int wo) {
+    public  Picture spiegelHorizontalWo(Picture originalbild, int wo) { //geniale Idee !!
         int breite = originalbild.getWidth();
         int hoehe  = originalbild.getHeight();
         int help = 0;
@@ -116,12 +116,12 @@ public class GeometrischeBildoperationen
         if(wo < breite/2){
             for(int x = 0; x < wo; x++) {//gespiegeltes Bild
                 for(int y = 0; y < hoehe; y++) {
-                    pixelNeu[x][y] = pixel[wo*2 + help - x -1][y];
+                    pixelNeu[x][y] = pixel[wo*2 + help - x -1][y]; //help = 0 konstant ??
                 }
             }
             for(int x = wo; x < breite; x++) { //ungespiegeltes Bildübernommen
                 for(int y=0;y < hoehe; y++) {
-                    pixelNeu[x][y] = pixel[x][y];
+                    pixelNeu[x][y] = pixel[x][y]; //also ab wo spiegelst du nichts mehr...
                 }
             }
         }else{
@@ -132,7 +132,7 @@ public class GeometrischeBildoperationen
             }
             for(int x = wo; x < breite; x++) {
                 for(int y=0;y < hoehe; y++) {
-                    pixelNeu[x][y] = pixel[wo-(x-wo)][y];
+                    pixelNeu[x][y] = pixel[wo-(x-wo)][y]; //warum brauchst du hier +help -1 nicht mehr? (oben nicht aufgeräumt?)
                 }
             }
         }

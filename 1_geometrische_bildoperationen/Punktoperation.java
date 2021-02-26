@@ -24,7 +24,7 @@ public class Punktoperation
             for(int y=0;y < hoehe; y++) {
                 graudurchschnitt=(pixel[x][y].getRed()+pixel[x][y].getBlue()+pixel[x][y].getGreen())/3;
                 
-                pixelNeu[x][y]= new Color(graudurchschnitt,graudurchschnitt,graudurchschnitt);
+                pixelNeu[x][y]= new Color(graudurchschnitt,graudurchschnitt,graudurchschnitt); // sehr gut !
             }
         }
         
@@ -57,7 +57,7 @@ public class Punktoperation
                      grauMin=grünanteil;
                 }
                 
-                pixelNeu[x][y]= new Color(grauMin,grauMin,grauMin);
+                pixelNeu[x][y]= new Color(grauMin,grauMin,grauMin); //super !
             }
         }
       
@@ -91,7 +91,7 @@ public class Punktoperation
                 }
                 
                 
-                pixelNeu[x][y]= new Color(grauMax,grauMax,grauMax);
+                pixelNeu[x][y]= new Color(grauMax,grauMax,grauMax); // perfekt
             }
         }
       
@@ -118,7 +118,7 @@ public class Punktoperation
                 
                 grauNat=(int)(rotanteil+blauanteil+grünanteil);
                 
-                pixelNeu[x][y]= new Color(grauNat,grauNat,grauNat);
+                pixelNeu[x][y]= new Color(grauNat,grauNat,grauNat); // auch gelöst!
             }
         }
       

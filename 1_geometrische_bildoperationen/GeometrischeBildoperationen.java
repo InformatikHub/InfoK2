@@ -6,7 +6,7 @@ import java.util.Random;
  * Algorithmen zur Änderung der Pixelpositionen eines Pictures
  * z.B. drehen, spiegeln usw.
  *
- * @author Thomas Schaller
+ * @author Valentin Grießer
  * @version 1.1 (28.11.2019)
  */
 public class GeometrischeBildoperationen 
@@ -43,7 +43,7 @@ public class GeometrischeBildoperationen
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                pixelNeu[x][y] = pixel[x][(hoehe-1)-y];
+                pixelNeu[x][y] = pixel[x][(hoehe-1)-y]; // super !
             }
         }
 
@@ -57,11 +57,11 @@ public class GeometrischeBildoperationen
         int hoehe  = originalbild.getHeight();
 
         Color[][] pixel = originalbild.getPixelArray();
-        Color[][] pixelNeu = new Color[hoehe][breite];
+        Color[][] pixelNeu = new Color[hoehe][breite]; // ja
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                pixelNeu[y][x] = pixel[(breite-1)-x][y];
+                pixelNeu[y][x] = pixel[(breite-1)-x][y]; // gut
             }
         }
 
@@ -79,7 +79,7 @@ public class GeometrischeBildoperationen
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                pixelNeu[y][x] = pixel[x][(hoehe-1)-y];
+                pixelNeu[y][x] = pixel[x][(hoehe-1)-y]; // super!
             }
         }
 
@@ -97,7 +97,9 @@ public class GeometrischeBildoperationen
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                pixelNeu[x][y] = pixel[(breite-1)-x][(hoehe-1)-y];
+                pixelNeu[x][y] = pixel[(breite-1)-x][(hoehe-1)-y]; // gut, keiner kommt auf die Idee zweimal zu drehen um um 180 ° zu drehen, ist schon erlaubt...
+				// wie sähe der Code dann aus?
+				// super Lösungen von dir aber ! 
             }
         }
 

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=HSB
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ PixelColor\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=c
+comment1.target=double\ getHue(java.awt.Color)
+comment2.params=c
+comment2.target=double\ getSaturation(java.awt.Color)
+comment3.params=c
+comment3.target=double\ getBrightness(java.awt.Color)
+comment4.params=h\ s\ b
+comment4.target=java.awt.Color\ getColor(double,\ double,\ double)
+numComments=5

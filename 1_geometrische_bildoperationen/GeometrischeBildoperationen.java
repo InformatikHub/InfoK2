@@ -116,10 +116,10 @@ public class GeometrischeBildoperationen
         if(wo < breite/2){
             for(int x = 0; x < wo; x++) {//gespiegeltes Bild
                 for(int y = 0; y < hoehe; y++) {
-                    pixelNeu[x][y] = pixel[wo*2 + help - x -1][y]; //help = 0 konstant ??
+                    pixelNeu[x][y] = pixel[wo*2 - x -1][y]; 
                 }
             }
-            for(int x = wo; x < breite; x++) { //ungespiegeltes Bildübernommen
+            for(int x = wo; x < breite; x++) { //ungespiegeltes Bild übernommen
                 for(int y=0;y < hoehe; y++) {
                     pixelNeu[x][y] = pixel[x][y]; //also ab wo spiegelst du nichts mehr...
                 }
@@ -132,7 +132,7 @@ public class GeometrischeBildoperationen
             }
             for(int x = wo; x < breite; x++) {
                 for(int y=0;y < hoehe; y++) {
-                    pixelNeu[x][y] = pixel[wo-(x-wo)][y]; //warum brauchst du hier +help -1 nicht mehr? (oben nicht aufgeräumt?)
+                    pixelNeu[x][y] = pixel[wo-(x-wo)][y]; //warum brauchst du hier +help -1 nicht mehr? (oben nicht aufgeräumt?) -> help war eine Hilfsvariable für einen anderen Ansatz, die ich nicht mehr brauche
                 }
             }
         }

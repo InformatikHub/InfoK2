@@ -12,12 +12,11 @@ public class Punktoperationen {
     public Picture graustufenDurchschnitt(Picture original) {
         int breite = original.getWidth();
         int hoehe  = original.getHeight();
-
+        int ehre = 0;
+        
         Color[][] pixel = original.getPixelArray();
         Color[][] pixelNeu = new Color[breite][hoehe];
         Color tmp;
-        int ehre = 0;
-        Picture newImg = original; //?
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
@@ -39,7 +38,6 @@ public class Punktoperationen {
         Color[][] pixelNeu = new Color[breite][hoehe];
         Color tmp;
         int ehre = 0;
-        Picture newImg = original; //warum?
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {

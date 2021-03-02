@@ -75,7 +75,7 @@ public class Punktoperationen {
     public Picture graustufenMax(Picture original) {
         int breite = original.getWidth();
         int hoehe  = original.getHeight();
-        int tmp;
+        int tmp = 4;
         
         Color px;
         Color[][] pixel = original.getPixelArray();
@@ -94,30 +94,41 @@ public class Punktoperationen {
     }
     
     public int getMaxColor(Color pixel){
-        int red,green,blue;
-        red = pixel.getRed();
-        green = pixel.getGreen();
-        blue = pixel.getBlue();
-        if((red > blue && red > green) || (red > blue)){//falls red = 15 blue = 10 und green = 20 hast du hier einen Fehler, oder?
-            return red;
-        }else if ((blue > red && blue > green) || (blue > red)){
-            return blue;
-        }else{
-            return green;
+        int[] rgb = {pixel.getRed(), pixel.getGreen(), pixel.getBlue()};
+        int tmp = 0;
+         for(int i = 0; i < rgb.length; i++){
+            for(int j = 0; j < rgb.length; j++){
+                for(int k = 0; k < rgb.length; k++){
+                    if(rgb[i] > rgb[j] && rgb[i] > rgb[k] && rgb[i] > rgb[tmp]) tmp = i;
+                }
+            }
         }
+        return rgb[tmp];
+    }
+    
+    public int getMax(int a, int b, int c){
+        int[] rgb = {a,b,c};
+        int tmp = 0;
+        for(int i = 0; i < rgb.length; i++){
+            for(int j = 0; j < rgb.length; j++){
+                for(int k = 0; k < rgb.length; k++){
+                    if(rgb[i] > rgb[j] && rgb[i] > rgb[k] && rgb[i] > rgb[tmp]) tmp = i;
+                }
+            }
+        }
+        return rgb[tmp];
     }
     
     public int getMinColor(Color pixel){
-        int red,green,blue;
-        red = pixel.getRed();
-        green = pixel.getGreen();
-        blue = pixel.getBlue();
-        if((red < blue && red < green) || (red < blue)){ //falls red = 10 blue = 15 und green = 5 hast du hier einen Fehler, oder?
-            return red;
-        }else if ((blue < red && blue < green) || (blue < red)){
-            return blue;
-        }else{
-            return green;
+        int[] rgb = {pixel.getRed(), pixel.getGreen(), pixel.getBlue()};
+        int tmp = 0;
+         for(int i = 0; i < rgb.length; i++){
+            for(int j = 0; j < rgb.length; j++){
+                for(int k = 0; k < rgb.length; k++){
+                    if(rgb[i] < rgb[j] && rgb[i] < rgb[k] && rgb[i] < rgb[tmp]) tmp = i;
+                }
+            }
         }
+        return rgb[tmp];
     }
 }

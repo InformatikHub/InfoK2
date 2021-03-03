@@ -74,7 +74,7 @@ public class GeometrischeBildoperationen
         int hoehe  = original.getHeight();
 
         Color[][] pixel = original.getPixelArray();
-        Color[][] pixelNeu = new Color[hoehe][breite];//gut
+        Color[][] pixelNeu = new Color[hoehe][breite];//sehr gut
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {

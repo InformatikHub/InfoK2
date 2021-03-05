@@ -127,6 +127,8 @@ public class GeometrischeBildoperationen
         f1 = new Color(200,0,255); 
         f2 = new Color(0xC800FF);
          
+        
+        // Test Ausgabe
         Color[][] pixelNeu = new Color[500][500];
         int x,y;
         for (x=0;x<500;x++)

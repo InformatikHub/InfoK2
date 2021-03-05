@@ -102,7 +102,7 @@ public class GeometrischeBildoperationen
         neuesBild.setPixelArray(pixelNeu); 
         return neuesBild;
     }
-    
+
     /** drehe180° 
      * @param originalbild Ein Bild (Picture),
      * @return Eine gedrehte Kopie des Bildes
@@ -117,17 +117,16 @@ public class GeometrischeBildoperationen
 
         neuesBild1 = dreheLinks(originalbild); 
         neuesBild2 = dreheLinks(neuesBild1); 
-       
+
         return neuesBild2;
     }
-    
+
     public void farbTest() {
         Color f1;
         Color f2;
         f1 = new Color(200,0,255); 
         f2 = new Color(0xC800FF);
-         
-        
+
         // Test Ausgabe
         Color[][] pixelNeu = new Color[500][500];
         int x,y;
@@ -141,7 +140,6 @@ public class GeometrischeBildoperationen
                 pixelNeu[x][y]=f2;
         Picture neuesBild2 = new Picture();
         neuesBild2.setPixelArray(pixelNeu);                
-        
-        
+
     }
 }

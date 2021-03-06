@@ -48,7 +48,7 @@ public class GeometrischeBildoperationen
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                pixelNeu[x][y] = pixel[x][(hoehe-1)-y];
+                pixelNeu[x][y] = pixel[x][(hoehe-1)-y]; //sehr gut!
             }
         }
 
@@ -67,11 +67,11 @@ public class GeometrischeBildoperationen
         int hoehe  = originalbild.getHeight();
 
         Color[][] pixel = originalbild.getPixelArray();
-        Color[][] pixelNeu = new Color[hoehe][breite];
+        Color[][] pixelNeu = new Color[hoehe][breite]; //ja
 
         for(int x=0; x < hoehe; x++) {
             for(int y=0;y < breite; y++) {
-                pixelNeu[x][y] = pixel[(breite-1)-y][x];
+                pixelNeu[x][y] = pixel[(breite-1)-y][x]; //super gemacht!
             }
         }
 
@@ -90,11 +90,11 @@ public class GeometrischeBildoperationen
         int hoehe  = originalbild.getHeight();
 
         Color[][] pixel = originalbild.getPixelArray();
-        Color[][] pixelNeu = new Color[hoehe][breite];
+        Color[][] pixelNeu = new Color[hoehe][breite]; // genau!
 
         for(int x=0; x < hoehe; x++) {
             for(int y=0;y < breite; y++) {
-                pixelNeu[x][y] = pixel[y][(hoehe-1)-x];
+                pixelNeu[x][y] = pixel[y][(hoehe-1)-x]; //perfekt!
             }
         }
 
@@ -116,12 +116,12 @@ public class GeometrischeBildoperationen
         Picture neuesBild2 = new Picture();
 
         neuesBild1 = dreheLinks(originalbild); 
-        neuesBild2 = dreheLinks(neuesBild1); 
+        neuesBild2 = dreheLinks(neuesBild1); //sehr clever gelöst!! 
 
         return neuesBild2;
     }
 
-    public void farbTest() {
+    public void farbTest() {//ich schick dir einen Link zur Farbwahl, oder wozu sollte diese Methode dienen?
         Color f1;
         Color f2;
         f1 = new Color(200,0,255); 

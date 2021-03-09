@@ -49,7 +49,26 @@ public Picture dreheLinks(Picture original){
         neuesBild.setPixelArray(pixelNeu); 
         return neuesBild;
     }
-    
+    public Picture dreheRechts(Picture original){
+        int breite = original.getWidth();
+        int hoehe  = original.getHeight();
 
+        Color[][] pixel = original.getPixelArray();
+        Color[][] pixelNeu = new Color[hoehe][breite];
+
+        for(int x=0; x < breite; x++) {
+            for(int y=0;y < hoehe; y++) {
+                pixelNeu[y][x] = pixel[breite-1-x][y];
+            }
+        }
+        Picture neuesBild = new Picture();
+        neuesBild.setPixelArray(pixelNeu); 
+        return neuesBild;
+    }
+public Picture drehe180(Picture original){
+        Picture neuesBild = dreheLinks(original);
+        Picture zwischenBild = dreheRechts(neuesBild);
+        return zwischenBild;
+    }
 
 }

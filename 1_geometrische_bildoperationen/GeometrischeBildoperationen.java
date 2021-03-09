@@ -6,9 +6,8 @@ import java.util.Random;
  * Algorithmen zur Änderung der Pixelpositionen eines Pictures
  * z.B. drehen, spiegeln usw.
  *
- * @author Thomas Schaller
- * @author InfoK2
- * @version 1.1 (2.3.2021)
+ * @author Uli Göppert
+ * @version 8.3.21
  */
 public class GeometrischeBildoperationen 
 {
@@ -34,111 +33,83 @@ public class GeometrischeBildoperationen
         neuesBild.setPixelArray(pixelNeu); 
         return neuesBild;
     }
-    
-    public Picture spiegelVertikal(Picture original){
-        int breite = original.getWidth();
-        int hoehe  = original.getHeight();
 
-        Color[][] pixel = original.getPixelArray();
-        Color[][] pixelNeu = new Color[breite][hoehe];
+    /** spiegeleVertikal spiegelt das Bild, so dass oben und unten getauscht werden
+     * @param originalbild Ein Bild (Picture), das gespiegelt werden soll
+     * @return Eine gespiegelte Kopie des Bildes
+     */
 
-        for(int x=0; x < breite; x++) {
-            for(int y=0;y < hoehe; y++) {
-                pixelNeu[x][y] = pixel[x][(hoehe-1)-y]; //gut
-            }
-        }
-        Picture neuesBild = new Picture();
-        neuesBild.setPixelArray(pixelNeu); 
-        return neuesBild;
-    }
-    
-    public Picture dreheLinks(Picture original){
-        int breite = original.getWidth();
-        int hoehe  = original.getHeight();
-
-        Color[][] pixel = original.getPixelArray();
-        Color[][] pixelNeu = new Color[hoehe][breite];
-
-        for(int x=0; x < breite; x++) {
-            for(int y=0;y < hoehe; y++) {
-                pixelNeu[y][x] = pixel[x][y]; //stimmt so nicht, zusätzlich wird das Bild noch bzgl. vorne und hinten gedreht.
-            }
-        }
-        Picture neuesBild = new Picture();
-        neuesBild.setPixelArray(pixelNeu); 
-        return neuesBild;
-    }
-    
-    public Picture dreheRechts(Picture original){
-        int breite = original.getWidth();
-        int hoehe  = original.getHeight();
-
-        Color[][] pixel = original.getPixelArray();
-        Color[][] pixelNeu = new Color[hoehe][breite];//gut
-
-        for(int x=0; x < breite; x++) {
-            for(int y=0;y < hoehe; y++) {
-                pixelNeu[y][x] = pixel[breite-1-x][hoehe-1-y]; //stimmt so auch nicht, du spiegelst einmal von oben nach unten zuviel
-            }
-        }
-        Picture neuesBild = new Picture();
-        neuesBild.setPixelArray(pixelNeu); 
-        return neuesBild;
-    }
-    
-    public Picture drehe180(Picture original){
-        int breite = original.getWidth();
-        int hoehe  = original.getHeight();
-
-        Color[][] pixel = original.getPixelArray();
-        Color[][] pixelNeu = new Color[breite][hoehe];
-
-        for(int x=0; x < breite; x++) {
-            for(int y=0;y < hoehe; y++) {
-                pixelNeu[x][y] = pixel[breite-1-x][(hoehe-1)-y]; //gut
-            }
-        }
-        Picture neuesBild = new Picture();
-        neuesBild.setPixelArray(pixelNeu); 
-        return neuesBild;
-    }
-    public  Picture spiegelHorizontalMitte(Picture originalbild) {
-        return spiegelHorizontalWo(originalbild, originalbild.getWidth()/2);
-    }   
-    
-    public  Picture spiegelHorizontalWo(Picture originalbild, int wo) { //geniale Idee !!
+    public  Picture spiegelVertikal(Picture originalbild) {
         int breite = originalbild.getWidth();
         int hoehe  = originalbild.getHeight();
-        int help = 0;
 
         Color[][] pixel = originalbild.getPixelArray();
         Color[][] pixelNeu = new Color[breite][hoehe];
         
-        if(wo < breite/2){
-            for(int x = 0; x < wo; x++) {//gespiegeltes Bild
-                for(int y = 0; y < hoehe; y++) {
-                    pixelNeu[x][y] = pixel[wo*2 - x -1][y]; 
-                }
+        for(int x=0; x < breite; x++) {
+            for(int y=0;y < hoehe; y++) {
+                pixelNeu[x][y] = pixel[x][(hoehe-1)-y];
             }
-            for(int x = wo; x < breite; x++) { //ungespiegeltes Bild übernommen
-                for(int y=0;y < hoehe; y++) {
-                    pixelNeu[x][y] = pixel[x][y]; //also ab wo spiegelst du nichts mehr...
-                }
+        }
+       
+        Picture neuesBild = new Picture(); 
+        neuesBild.setPixelArray(pixelNeu);  
+        return neuesBild;
+    }
+
+
+    /** dreheRechts dreht das Bild um 90° nach rechts
+     * @param originalbild Ein Bild (Picture), das gedreht werden soll
+     * @return Eine gedrehte Kopie des Bildes
+     */
+
+    public Picture dreheRechts(Picture originalbild) {
+        int breite = originalbild.getHeight();
+        int hoehe  = originalbild.getWidth();
+
+        Color[][] pixel = originalbild.getPixelArray();
+        Color[][] pixelNeu = new Color[breite][hoehe];
+
+        for(int x=0; x < breite; x++) {
+            for(int y=0;y < hoehe; y++) { 
+                pixelNeu[x][y] = pixel[y][(breite-1)-x];
             }
-        }else{
-            for(int x = 0; x < wo; x++) {
-                for(int y = 0; y < hoehe; y++) {
-                    pixelNeu[x][y] = pixel[x][y];
-                }
-            }
-            for(int x = wo; x < breite; x++) {
-                for(int y=0;y < hoehe; y++) {
-                    pixelNeu[x][y] = pixel[wo-(x-wo)][y]; //warum brauchst du hier +help -1 nicht mehr? (oben nicht aufgeräumt?) -> help war eine Hilfsvariable für einen anderen Ansatz, die ich nicht mehr brauche
-                }
+        }
+        Picture neuesBild = new Picture();
+        neuesBild.setPixelArray(pixelNeu);
+        return neuesBild;
+    }
+
+    /** dreheLinks dreht das Bild um 90° nach links
+     * @param originalbild Ein Bild (Picture), das gedreht werden soll
+     * @return Eine gedrehte Kopie des Bildes
+     */
+    public  Picture dreheLinks(Picture originalbild) {
+        int breite = originalbild.getHeight();
+        int hoehe  = originalbild.getWidth();
+
+        Color[][] pixel = originalbild.getPixelArray();
+        Color[][] pixelNeu = new Color[breite][hoehe];
+
+        for(int x=0; x < breite; x++) {
+            for(int y=0;y < hoehe; y++) { 
+                pixelNeu[x][y] = pixel[(hoehe-1)-y][x];
             }
         }
         Picture neuesBild = new Picture();
         neuesBild.setPixelArray(pixelNeu); 
         return neuesBild;
-    }   
+
+    }
+
+    /** drehe180 dreht das Bild um 180° 
+     * @param originalbild Ein Bild (Picture), das gedreht werden soll
+     * @return Eine gedrehte Kopie des Bildes
+     */
+    public  Picture drehe180(Picture originalbild) {
+      Picture bild90 = dreheLinks(originalbild);
+      Picture bild180 = dreheLinks(bild90);
+      return bild180;
+    }
+
 }

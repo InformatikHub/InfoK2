@@ -30,7 +30,7 @@ public class Punktoperation
 
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
-                graudurchschnitt=(pixel[x][y].getRed()+pixel[x][y].getGreen()+pixel[x][y].getBlue());
+                graudurchschnitt=(pixel[x][y].getRed()+pixel[x][y].getGreen()+pixel[x][y].getBlue());// Durchschnitt: noch durch 3 teilen...
                 pixelNeu[x][y] = new Color(graudurchschnitt,graudurchschnitt,graudurchschnitt);
             }
         }

@@ -98,8 +98,8 @@ public class GeometrischeBildoperationen
         for(int x=0; x < breite; x++) {
             for(int y=0;y < hoehe; y++) {
                 pixelNeu[x][y] = pixel[(breite-1)-x][(hoehe-1)-y]; // gut, keiner kommt auf die Idee zweimal zu drehen um um 180 ° zu drehen, ist schon erlaubt...
-				// wie sähe der Code dann aus?
-				// super Lösungen von dir aber ! 
+                // wie sähe der Code dann aus?
+                // super Lösungen von dir aber ! 
             }
         }
 

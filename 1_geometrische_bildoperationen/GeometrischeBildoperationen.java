@@ -88,5 +88,11 @@ public class GeometrischeBildoperationen
         neuesBild.setPixelArray(pixelNeu); 
         return neuesBild;
     }
-
+    
+    public  Picture drehe180(Picture originalbild) {
+        Picture bild90 = dreheRechts(originalbild);
+        Picture bild180 = dreheRechts(bild90);
+        return bild180;
+    }
+    
 }

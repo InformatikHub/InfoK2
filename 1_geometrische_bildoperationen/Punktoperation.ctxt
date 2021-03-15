@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Punktoperation
+comment0.text=\r\n\ Algorithmen\ zur\ \u00C4nderung\ der\ Pixelpositionen\ eines\ Pictures\r\n\ z.B.\ drehen,\ spiegeln\ usw.\r\n\r\n\ @author\ Rebecca\ Hogg\r\n\ @version\ 9.3.\r\n\ \r\n\ super\ gemacht,\ Gru\u00DF\ G\u00F6\r\n\ \r\n
+comment1.params=originalbild
+comment1.target=imp.Picture\ graustufenDurchschnitt(imp.Picture)
+comment1.text=\ spiegeleHorizontal\ spiegelt\ das\ Bild,\ so\ dass\ rechts\ und\ links\ getauscht\ werden\r\n\ @param\ originalbild\ Ein\ Bild\ (Picture),\ das\ gespiegelt\ werden\ soll\r\n\ @return\ Eine\ gespiegelte\ Kopie\ des\ Bildes\r\n
+comment2.params=originalbild
+comment2.target=imp.Picture\ graustufenMin(imp.Picture)
+comment3.params=originalbild
+comment3.target=imp.Picture\ graustufenMax(imp.Picture)
+numComments=4

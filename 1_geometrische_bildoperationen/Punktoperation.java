@@ -8,6 +8,9 @@ import java.util.Random;
  *
  * @author Rebecca Hogg
  * @version 9.3.
+ * 
+ * super gemacht, Gruß Gö
+ * 
  */
 public class Punktoperation
 {

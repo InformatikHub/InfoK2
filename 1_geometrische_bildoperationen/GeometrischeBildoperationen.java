@@ -8,6 +8,9 @@ import java.util.Random;
  *
  * @author Simon Stoll 
  * @version 1.1 
+ * 
+ * gut gemacht !!
+ * 
  */
 public class GeometrischeBildoperationen 
 {

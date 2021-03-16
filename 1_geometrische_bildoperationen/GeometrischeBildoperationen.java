@@ -6,9 +6,8 @@ import java.util.Random;
  * Algorithmen zur Änderung der Pixelpositionen eines Pictures
  * z.B. drehen, spiegeln usw.
  *
- * @author Thomas Schaller
  * @author Lukas Hever
- * @version 1.1 (24.02.2021)
+ * @version 1.1 (16.03.2021)
  */
 public class GeometrischeBildoperationen 
 {
@@ -104,6 +103,33 @@ public class GeometrischeBildoperationen
 
         Picture neuesBild = new Picture();
         neuesBild.setPixelArray(pixelNeu); 
+        return neuesBild;
+    }
+    
+    public Picture graustufenDurchschnitt(Picture originalbild) {
+        int breite = originalbild.getWidth();
+        int hoehe  = originalbild.getHeight();
+        
+        Color[][] pixel = originalbild.getPixelArray();
+        Color[][] pixelNeu = new Color[breite][hoehe];
+        
+        for(int x=0; x < breite; x++) {
+            for(int y=0;y < hoehe; y++) {
+                Color f1;
+                f1 = new Color(255,0,0);
+                
+                Color f2;
+                f2 = new Color(0,255,0);
+                
+                Color f3;
+                f3 = new Color(0,0,255);
+                
+                pixelNeu[x][y] = (f1+f2+f3) / 3;
+            }
+        }
+        
+        Picture neuesBild = new Picture();
+        neuesBild.setPixelArray(pixelNeu);
         return neuesBild;
     }
 }

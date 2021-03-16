@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Mehrpixeloperation
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Mehrpixeloperation.\r\n\ \r\n\ @author\ Alwin\ Choi\r\n\ @version\ 9.3\r\n
+comment1.params=originalbild
+comment1.target=imp.Picture\ weichzeichnen(imp.Picture)
+comment2.params=
+comment2.target=int[][]\ filter()
+numComments=3
